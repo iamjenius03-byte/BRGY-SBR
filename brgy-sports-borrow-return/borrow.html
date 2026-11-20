@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borrow - Barangay Sports Equipment Borrow and Return</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== MOBILE TOGGLE ===== -->
+    <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- ===== SIDEBAR OVERLAY ===== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ===== SIDEBAR LAYOUT ===== -->
+    <div class="sidebar-layout">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-basketball"></i> BSEBR
+            </div>
+
+            <div class="user-info">
+    <div class="avatar">
+        <i class="fas fa-user"></i>
+    </div>
+    <div class="name" id="userName">Loading...</div>
+    <div class="role" id="userRole">Resident</div>
+</div>
+            <nav>
+                <ul>
+                    <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="equipment.html"><i class="fas fa-list"></i> Equipment</a></li>
+                    <li><a href="borrow.html" class="active"><i class="fas fa-hand-holding"></i> Borrow</a></li>
+                    <li><a href="my-borrowings.html"><i class="fas fa-clipboard-list"></i> My Borrowings</a></li>
+                    <li><a href="return.html"><i class="fas fa-undo-alt"></i> Return</a></li>
+                    <li><a href="history.html"><i class="fas fa-history"></i> History</a></li>
+                    <li><a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main-content">
+            <section class="borrow-section">
+                <div class="icon">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h2>Borrow Equipment</h2>
+                <p class="subtitle">Fill in the details to borrow sports equipment.</p>
+
+                <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> Borrow request submitted successfully!
+                </div>
+
+                <!-- Error Message -->
+                <div class="error-message" id="errorMessage">
+                    <i class="fas fa-exclamation-circle"></i> Error message here.
+                </div>
+
+                <!-- Borrow Info -->
+                <div class="borrow-info">
+                    <p><strong>📌 Reminders:</strong></p>
+                    <p>• Borrowing period is up to <strong>7 days</strong> only.</p>
+                    <p>• Please return the equipment on or before the due date.</p>
+                    <p>• Late returns will incur a penalty of <strong>₱5</strong>.</p>
+                    <p>• <strong>⚠️ Lost or Damaged Equipment:</strong> Replacement cost must be paid. <strong>Failure to pay will result in a BAN</strong> from borrowing.</p>
+                    <p>• <strong>⚠️ Overdue Penalty:</strong> 1st warning → 2nd warning → 3rd warning → <strong>ACCOUNT BAN</strong>.</p>
+                    <p>• Make sure to check the equipment condition before borrowing.</p>
+                </div>
+
+                <form id="borrowForm">
+                    <div class="form-group">
+    <label for="equipment">Equipment</label>
+    <div class="input-icon">
+        <i class="fas fa-basketball-ball"></i>
+        <select id="equipment" required>
+            <option value="">Select equipment...</option>
+            <option value="1">Basketball</option>
+            <option value="2">Volleyball</option>
+            <option value="3">Badminton Racket</option>
+            <option value="4">Table Tennis Paddle</option>
+            <option value="5">Sepak Takraw Ball</option>
+        </select>
+    </div>
+</div>
+
+                    <div class="form-group">
+                        <label for="quantity">Quantity</label>
+                        <div class="input-icon">
+                            <i class="fas fa-hashtag"></i>
+                            <input type="number" id="quantity" min="1" max="5" placeholder="1" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="purpose">Purpose</label>
+                        <div class="input-icon">
+                            <i class="fas fa-pencil-alt"></i>
+                            <textarea id="purpose" placeholder="e.g., Barangay league game, practice, etc." required></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="borrow-btn">
+                        Borrow Equipment
+                    </button>
+                </form>
+            </section>
+        </main>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+    <p>&copy; 2026 Barangay Sports Equipment Borrow and Return. All rights reserved.</p>
+    <p>
+        <strong>System Architect Communications Contact:</strong>
+        <a href="mailto:tridaniocagayanjenny@gmail.com">tridaniocagayanjenny@gmail.com</a>
+    </p>
+</footer>
+
+    <!-- ===== EXTERNAL JAVASCRIPT ===== -->
+    <script src="borrow.js"></script>
+    <script src="sidebar.js"></script>
+
+</body>
+</html>

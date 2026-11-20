@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Return - Barangay Sports Equipment Borrow and Return</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== MOBILE TOGGLE ===== -->
+    <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- ===== SIDEBAR OVERLAY ===== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ===== SIDEBAR LAYOUT ===== -->
+    <div class="sidebar-layout">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-basketball"></i> BSEBR
+            </div>
+
+            <div class="user-info">
+    <div class="avatar">
+        <i class="fas fa-user"></i>
+    </div>
+    <div class="name" id="userName">Loading...</div>
+    <div class="role" id="userRole">Resident</div>
+</div>
+
+            <nav>
+                <ul>
+                   <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="equipment.html"><i class="fas fa-list"></i> Equipment</a></li>
+                    <li><a href="borrow.html"><i class="fas fa-hand-holding"></i> Borrow</a></li>
+                    <li><a href="my-borrowings.html"><i class="fas fa-clipboard-list"></i> My Borrowings</a></li>
+                    <li><a href="return.html"><i class="fas fa-undo-alt"></i> Return</a></li>
+                    <li><a href="history.html"><i class="fas fa-history"></i> History</a></li>
+                    <li><a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main-content">
+            <section class="return-section">
+                <div class="header">
+                    <h2><i class="fas fa-undo-alt"></i> Return Equipment</h2>
+                    <span class="icon"><i class="fas fa-hand-holding-heart"></i></span>
+                </div>
+                <p class="subtitle">Select the equipment you want to return. Late returns will incur a penalty.</p>
+
+                <!-- Success Message -->
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i> Equipment returned successfully!
+                </div>
+
+                <!-- Error Message -->
+                <div class="error-message" id="errorMessage">
+                    <i class="fas fa-exclamation-circle"></i> Error message here.
+                </div>
+
+                <!-- Empty State -->
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <i class="fas fa-box-open"></i>
+                    <p>You have no equipment to return.</p>
+                    <a href="borrow.html" class="ctta-button" style="margin-top: 1rem;">Borrow Equipment</a>
+                </div>
+
+                <!-- Return Table -->
+                <div id="tableContainer">
+                    <table class="return-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 40px;">Select</th>
+                                <th>Equipment</th>
+                                <th>Borrow Date</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                                <th>Quantity</th>
+                            </tr>
+                        </thead>
+                        <tbody id="returnTableBody">
+                            <!-- Dynamic rows from JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Penalty Box -->
+                <div class="penalty-box" id="penaltyBox">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Late Fee</h4>
+                    <p>You have overdue items. A penalty of <strong>₱5 per day</strong> will be applied.</p>
+                    <p>Total Penalty: <span class="penalty-amount" id="penaltyAmount">₱0.00</span></p>
+                </div>
+
+                <!-- Return Button -->
+                <button class="return-btn" id="returnBtn" disabled>
+                    <i class="fas fa-undo-alt"></i> Return Selected Equipment
+                </button>
+            </section>
+        </main>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>&copy; 2026 Barangay Sports Equipment Borrow and Return. All rights reserved.</p>
+        <p>
+            <a href="#"><i class="fas fa-envelope"></i> Contact</a> |
+            <a href="#"><i class="fas fa-lock"></i> Privacy Policy</a> |
+            <a href="#"><i class="fas fa-file-contract"></i> Terms of Use</a>
+        </p>
+    </footer>
+
+    <!-- ===== EXTERNAL JAVASCRIPT ===== -->
+    <script src="return.js"></script>
+    <script src="sidebar.js"></script>
+
+</body>
+</html>

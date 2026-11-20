@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipment List - Barangay Sports Equipment Borrow and Return</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== MOBILE TOGGLE ===== -->
+    <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- ===== SIDEBAR OVERLAY ===== -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- ===== SIDEBAR LAYOUT ===== -->
+    <div class="sidebar-layout">
+
+        <!-- ===== SIDEBAR ===== -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <i class="fas fa-basketball"></i> BSEBR
+            </div>
+
+<div class="user-info">
+    <div class="avatar">
+        <i class="fas fa-user"></i>
+    </div>
+    <div class="name" id="userName">Loading...</div>
+    <div class="role" id="userRole">Resident</div>
+</div>
+            <nav>
+                <ul>
+                   <li><a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="equipment.html" class="active"><i class="fas fa-list"></i> Equipment</a></li>
+                    <li><a href="borrow.html"><i class="fas fa-hand-holding"></i> Borrow</a></li>
+                    <li><a href="my-borrowings.html"><i class="fas fa-clipboard-list"></i> My Borrowings</a></li>
+                    <li><a href="return.html"><i class="fas fa-undo-alt"></i> Return</a></li>
+                    <li><a href="history.html"><i class="fas fa-history"></i> History</a></li>
+                    <li><a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== MAIN CONTENT ===== -->
+        <main class="main-content">
+            <!-- Page Header -->
+            <section class="page-header">
+                <h1><i class="fas fa-list"></i> Equipment List</h1>
+                <p>Browse all available sports equipment in your barangay.</p>
+            </section>
+
+            <!-- Search & Filter -->
+            <div class="search-section">
+                <input type="text" id="searchInput" placeholder="🔍 Search equipment..." />
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="ball">Ball Sports</option>
+                    <option value="racket">Racket Sports</option>
+                    <option value="others">Others</option>
+                </select>
+            </div>
+
+            <!-- Equipment Grid -->
+            <div class="equipment-grid" id="equipmentGrid">
+                <!-- 1. Basketball -->
+                <div class="equipment-card" data-name="Basketball" data-category="ball">
+                    <img src="images/basketball.jpg" alt="Basketball" />
+                    <h4>Basketball</h4>
+                    <p>Available: 8</p>
+                    <a href="borrow.html" class="ctta-button">Borrow</a>
+                </div>
+
+                <!-- 2. Volleyball -->
+                <div class="equipment-card" data-name="Volleyball" data-category="ball">
+                    <img src="images/volleyball.jpg" alt="Volleyball" />
+                    <h4>Volleyball</h4>
+                    <p>Available: 5</p>
+                    <a href="borrow.html" class="ctta-button">Borrow</a>
+                </div>
+
+                <!-- 3. Badminton Racket -->
+                <div class="equipment-card" data-name="Badminton Racket" data-category="racket">
+                    <img src="images/badmintonracket.jpg" alt="Badminton Racket" />
+                    <h4>Badminton Racket</h4>
+                    <p>Available: 3</p>
+                    <a href="borrow.html" class="ctta-button">Borrow</a>
+                </div>
+
+                <!-- 4. Table Tennis Paddle -->
+                <div class="equipment-card" data-name="Table Tennis Paddle" data-category="racket">
+                    <img src="images/tabletennispaddle.jpg" alt="Table Tennis Paddle" />
+                    <h4>Table Tennis Paddle</h4>
+                    <p>Available: 4</p>
+                    <a href="borrow.html" class="ctta-button">Borrow</a>
+                </div>
+
+                <!-- 5. Sepak Takraw Ball -->
+                <div class="equipment-card" data-name="Sepak Takraw Ball" data-category="ball">
+                    <img src="images/sepak.jpg" alt="Sepak Takraw Ball" />
+                    <h4>Sepak Takraw Ball</h4>
+                    <p>Available: 6</p>
+                    <a href="borrow.html" class="ctta-button">Borrow</a>
+                </div>
+            </div>
+
+                            <div class="user-info">
+                    <div class="avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="name">Loading...</div>
+                    <div class="role">Resident</div>
+                </div>
+        </main>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+   <footer>
+    <p>&copy; 2026 Barangay Sports Equipment Borrow and Return. All rights reserved.</p>
+    <p>
+        <strong>System Architect Communications Contact:</strong>
+        <a href="mailto:tridaniocagayanjenny@gmail.com">tridaniocagayanjenny@gmail.com</a>
+    </p>
+</footer>
+
+    <!-- ===== EXTERNAL JAVASCRIPT ===== -->
+    <script src="equipment.js"></script>
+    <script src="sidebar.js"></script>
+
+</body>
+</html>

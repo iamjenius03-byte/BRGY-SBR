@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Borrow Records - Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <button class="mobile-toggle" id="mobileToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="sidebar-layout">
+        <aside class="sidebar" id="sidebar">
+            <div class="logo"><i class="fas fa-basketball"></i> BSEBR</div>
+            <div class="user-info">
+                <div class="avatar"><i class="fas fa-user-shield"></i></div>
+                <div class="name" id="userName">Loading...</div>
+                <div class="role" id="userRole">Admin</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="admin.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="admin-equipment.html"><i class="fas fa-basketball"></i> Equipment</a></li>
+                    <li><a href="admin-borrows.html" class="active"><i class="fas fa-clipboard-list"></i> Borrow Records</a></li>
+                    <li><a href="admin-returns.html"><i class="fas fa-undo-alt"></i> Returns</a></li>
+                    <li><a href="admin-lost.html"><i class="fas fa-exclamation-triangle"></i> Lost/Damage Reports</a></li>
+                    <li><a href="admin-users.html"><i class="fas fa-users"></i> Manage Users</a></li>
+                    <li><a href="admin-overdue.html"><i class="fas fa-clock"></i> Overdue Reports</a></li>
+                    <li><a href="login.html" class="logout-link"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <div class="admin-section">
+                <div class="section-header">
+                    <h1><i class="fas fa-clipboard-list"></i> Borrow Records</h1>
+                </div>
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Borrower</th>
+                                <th>Equipment</th>
+                                <th>Borrow Date</th>
+                                <th>Due Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="borrowTableBody"></tbody>
+                    </table>
+                </div>
+                <div class="empty-state" id="emptyState" style="display: none;">
+                    <i class="fas fa-box-open"></i>
+                    <p>No borrow records found.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Barangay Sports Equipment Borrow and Return. All rights reserved.</p>
+        <p><strong>System Architect Communications Contact:</strong> <a href="mailto:tridaniocagayanjenny@gmail.com">tridaniocagayanjenny@gmail.com</a></p>
+    </footer>
+
+    <script src="sidebar.js"></script>
+    <script src="admin-borrows.js"></script>
+</body>
+</html>

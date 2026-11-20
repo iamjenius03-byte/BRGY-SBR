@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login - Barangay Sports Lending</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <nav class="top-nav">
+        <div class="logo"><i class="fas fa-basketball"></i> BSEBR</div>
+        <ul class="nav-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+            <li><a href="register.html"><i class="fas fa-user-plus"></i> Register</a></li>
+        </ul>
+    </nav>
+
+    <section class="login-section">
+        <div class="icon">
+            <i class="fas fa-user-shield"></i>
+        </div>
+        <h2>Admin Login</h2>
+        <p class="subtitle">Login to manage the barangay sports equipment system.</p>
+
+        <div class="error-message" id="errorMessage">
+            <i class="fas fa-exclamation-circle"></i> Invalid admin credentials.
+        </div>
+
+        <form id="adminLoginForm">
+            <div class="form-group">
+                <label for="adminEmail">Admin Email</label>
+                <div class="input-icon">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="adminEmail" placeholder="admin@barangay.com" required />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="password-wrapper">
+                    <i class="fas fa-lock input-icon-left"></i>
+                    <input type="password" id="adminPassword" placeholder="Enter admin password" required />
+                    <span class="toggle-password" onclick="togglePasswordVisibility('adminPassword', this)">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+            </div>
+
+            <button type="submit" class="login-btn">
+                <i class="fas fa-user-shield"></i> Login as Admin
+            </button>
+        </form>
+
+        <div class="register-link">
+            <a href="login.html"><i class="fas fa-arrow-left"></i> Back to User Login</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Barangay Sports Equipment Borrow and Return. All rights reserved.</p>
+        <p>
+            <strong>System Architect Communications Contact:</strong>
+            <a href="mailto:tridaniocagayanjenny@gmail.com">tridaniocagayanjenny@gmail.com</a>
+        </p>
+    </footer>
+
+    <script src="admin-login.js"></script>
+</body>
+</html>
